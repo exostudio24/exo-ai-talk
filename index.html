@@ -82,6 +82,9 @@
   .flow.compact .arrow{display:none}
   .flow.compact .step{padding:15px 14px}
 
+  /* case-study slide: big result metrics */
+  .cs-meta{margin-top:8px; color:var(--muted); font-size:clamp(13px,1.5vw,17px)}
+
   .title-meta{margin-top:auto; display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap}
   .speaker .n{font-size:clamp(20px,2.4vw,30px); font-weight:800}
   .speaker .r{color:var(--muted); font-size:clamp(14px,1.5vw,18px); margin-top:2px}
@@ -130,8 +133,8 @@
     <h2>EXO Technologies Global</h2>
     <p class="lead">App &amp; game studio — tự thiết kế, build và vận hành sản phẩm <b style="color:#fff">native iOS/Android</b>, phát hành ra thị trường quốc tế.</p>
     <div class="metrics three">
-      <div class="metric"><div class="v grad">100+</div><div class="l">app đã phát hành<br>(Plant Identifier, AI Try-On…)</div></div>
-      <div class="metric"><div class="v grad">50M+</div><div class="l">tổng lượt tải<br>trên toàn cầu</div></div>
+      <div class="metric"><div class="v grad">100+</div><div class="l">mobile app + games<br>đã phát hành</div></div>
+      <div class="metric"><div class="v grad">30+</div><div class="l">product partner<br>trong &amp; ngoài nước</div></div>
       <div class="metric"><div class="v grad">150+</div><div class="l">thị trường &amp; quốc<br>gia đã phát hành</div></div>
     </div>
   </section>
@@ -152,12 +155,12 @@
   </section>
 
   <!-- 4 THESIS -->
-  <section class="slide" data-note="Luận điểm chính của mình, nếu 15 phút này chỉ nhớ một câu thì nhớ câu này: Giá trị thật của AI không nằm ở chỗ nó viết được vài dòng code. Nó nằm ở chỗ nó tự động hoá được CẢ MỘT WORKFLOW, và tự sửa cho tới khi ra kết quả. Tiếp theo mình cho xem 3 workflow đang chạy thật ở EXO: App Factory, Creative Production và UA Agent.">
+  <section class="slide" data-note="Luận điểm chính của mình, nếu 15 phút này chỉ nhớ một câu thì nhớ câu này: Giá trị thật của AI không nằm ở chỗ nó viết được vài dòng code. Nó nằm ở chỗ nó tự động hoá được CẢ MỘT WORKFLOW, và tự sửa cho tới khi ra kết quả. Tiếp theo mình cho xem 3 workflow đang chạy thật ở EXO: Xưởng App, Creative Production và UA Agent.">
     <span class="kicker"><span class="dot"></span> Luận điểm</span>
     <h2>AI không chỉ <span style="color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.3)">viết code</span> —<br>AI chạy <span class="grad">cả workflow</span></h2>
     <p class="lead">Sức mạnh nằm ở <b style="color:#fff">vòng lặp tự sửa đến khi ra kết quả</b>, không phải một prompt lẻ. Đây là 3 workflow EXO đang chạy thật:</p>
     <div class="flow">
-      <div class="step"><div class="t">1 · App Factory</div><div class="s">Ý tưởng → App sẵn sàng KD</div></div>
+      <div class="step"><div class="t">1 · Xưởng App</div><div class="s">Ý tưởng → App sẵn sàng KD</div></div>
       <span class="arrow">→</span>
       <div class="step"><div class="t">2 · Creative Production</div><div class="s">Sản xuất creative</div></div>
       <span class="arrow">→</span>
@@ -165,30 +168,63 @@
     </div>
   </section>
 
-  <!-- WORKFLOW 1 · Ý tưởng → App sẵn sàng KD (Factory + CodePanel) -->
-  <section class="slide" data-note="Workflow 1 gộp hai mảnh của tụi mình: AI App Factory và CodePanel. Đầu tiên, một người KHÔNG BIẾT CODE mô tả app bằng tiếng người; hệ thống sinh app SwiftUI thật rồi chạy vòng lặp tự build — gặp lỗi compile thì Claude tự đọc, tự sửa, build lại đến khi chạy được. Mảnh thứ hai là CodePanel: build cả iOS lẫn Android từ xa, mở simulator/emulator ngay TRONG TRÌNH DUYỆT cạnh khung chat; PO bấm thẳng lên app để thao tác, còn AI tự động QA — chụp màn, dò lỗi, test luồng. Ghép lại: từ ý tưởng ra một app đã QA, sẵn sàng phát hành — không cần dev ngồi từ đầu, không cần máy Mac. [Ở đây bật demo Factory rồi Preview dock].">
+  <!-- WORKFLOW 1 · Ý tưởng → App sẵn sàng KD (Xưởng App) -->
+  <section class="slide" data-note="Workflow 1 — Xưởng App — gộp hai mảnh của tụi mình. Đầu tiên, một người KHÔNG BIẾT CODE mô tả app bằng ngôn ngữ tự nhiên; AI Agent viết code thật rồi chạy vòng lặp tự build — gặp lỗi compile thì AI Coding Agent tự đọc, tự sửa, build lại đến khi chạy được. Mảnh thứ hai: build cả iOS lẫn Android từ xa, mở simulator/emulator ngay TRONG TRÌNH DUYỆT cạnh khung chat; PO bấm thẳng lên app để thao tác, còn AI tự động QA — chụp màn, dò lỗi, test luồng. Ghép lại: từ ý tưởng ra một app đã QA, sẵn sàng phát hành — không cần dev ngồi từ đầu, không cần máy Mac. [Ở đây bật demo Xưởng App].">
     <span class="kicker"><span class="dot"></span> Workflow 1</span>
     <h2>Ý tưởng → <span class="grad">App sẵn sàng kinh doanh</span></h2>
-    <p class="lead">Người <b style="color:#fff">không cần biết code</b> mô tả app bằng lời. AI sinh SwiftUI, tự build &amp; sửa lỗi đến khi chạy — rồi build + QA từ xa ngay trong browser. Ra app đã kiểm thử, sẵn sàng phát hành.</p>
+    <p class="lead">Người <b style="color:#fff">không cần biết code</b> mô tả app bằng lời. AI Agent viết code, tự build &amp; sửa lỗi đến khi chạy — rồi build + QA từ xa ngay trong browser. Ra app đã kiểm thử, sẵn sàng phát hành.</p>
     <div class="grid cols-3">
-      <div class="card"><div class="num">TỪ Ý TƯỞNG</div><h3>Self-healing build loop</h3><p>Mô tả app bằng lời → Claude sinh SwiftUI → build → đọc lỗi → tự sửa → lặp đến khi chạy.</p><span class="tool">AI App Factory</span></div>
-      <div class="card"><div class="num">BUILD &amp; QA</div><h3>Preview + Auto-QA trong browser</h3><p>Build iOS + Android từ xa; simulator/emulator stream vào web, AI tự chụp màn, dò lỗi, test luồng.</p><span class="tool">CodePanel</span></div>
+      <div class="card"><div class="num">TỪ Ý TƯỞNG</div><h3>Self-healing build loop</h3><p>Mô tả app bằng lời → AI Agent viết code → build → đọc lỗi → tự sửa → lặp đến khi chạy.</p><span class="tool">Xưởng App · Build</span></div>
+      <div class="card"><div class="num">BUILD &amp; QA</div><h3>Preview + Auto-QA trong browser</h3><p>Build iOS + Android từ xa; simulator/emulator stream vào web, AI tự chụp màn, dò lỗi, test luồng.</p><span class="tool">Xưởng App · QA</span></div>
       <div class="card" style="border-color:rgba(56,224,255,.35)"><div class="num" style="color:var(--cyan)">KẾT QUẢ</div><h3>Tuần → Giờ, sẵn sàng phát hành</h3><p>Từ mô tả đến app đã QA — không cần dev ngồi từ đầu, không cần máy Mac/Xcode.</p></div>
     </div>
   </section>
 
+  <!-- CASE STUDY 1 · Lingua -->
+  <section class="slide" data-note="Case study Workflow 1 — Lingua, app học tiếng Anh. Toàn bộ app dựng qua workflow vừa nói: mô tả tính năng, AI Agent viết code, self-healing build, auto-QA — tất cả trong Xưởng App. Điểm chốt: chỉ 3 ngày từ ý tưởng đến lên App Store — một app do AI dựng đã ship thật và đang chạy có lãi. Từ khi lên store 28/04/2026, Lingua đạt gần 57 nghìn lượt tải, ROAS 111% — đã vượt điểm hoà vốn.">
+    <span class="kicker"><span class="dot"></span> Case study · Workflow 1</span>
+    <h2>Lingua — app học tiếng Anh</h2>
+    <p class="lead">Dựng trọn vẹn qua <b style="color:#fff">Xưởng App</b> — AI Agent viết code, tự build &amp; QA. Một app do AI dựng, đã ship thật và <b style="color:#fff">chạy có lãi</b>.</p>
+    <div class="metrics">
+      <div class="metric"><div class="v grad">3 ngày</div><div class="l">từ ý tưởng đến lên App Store</div></div>
+      <div class="metric"><div class="v grad">57K+</div><div class="l">lượt tải (từ 28/04/2026)</div></div>
+      <div class="metric"><div class="v grad">111%</div><div class="l">ROAS — đã vượt hoà vốn</div></div>
+    </div>
+    <div class="cs-meta">Số liệu vận hành thực tế · 28/04 – 10/07/2026</div>
+  </section>
+
   <!-- WORKFLOW 2 · Creative Production -->
-  <section class="slide" data-note="Workflow 2 — Creative Production. Đây là phần tạo nhiên liệu cho tăng trưởng. Trước đây mỗi creative cần script, storyboard, quay dựng, chỉnh sửa, resize, rồi mới test được. Bây giờ tụi mình dùng AI để đi từ insight sản phẩm sang nhiều góc hook, nhiều script, nhiều biến thể video. Công cụ như Seedance 2.0 giúp sản xuất nhanh các phiên bản quảng cáo để đem đi test. Điểm quan trọng là không cố đoán một video thắng; mình tạo nhiều giả thuyết và để dữ liệu trả lời.">
+  <section class="slide" data-note="Workflow 2 — Creative Production. Đây là phần tạo nhiên liệu cho tăng trưởng. Trước đây mỗi creative cần script, storyboard, quay dựng, chỉnh sửa, resize, rồi mới test được. Bây giờ tụi mình dùng AI để đi từ insight sản phẩm sang nhiều góc hook, nhiều script, nhiều biến thể video. Các mô hình AI video (text-to-video) giúp sản xuất nhanh các phiên bản quảng cáo để đem đi test. Điểm quan trọng là không cố đoán một video thắng; mình tạo nhiều giả thuyết và để dữ liệu trả lời.">
     <span class="kicker"><span class="dot"></span> Workflow 2</span>
     <h2>Creative Production</h2>
     <p class="lead">Dùng AI để biến insight sản phẩm thành <b style="color:#fff">hook, script và video ad variants</b> — sản xuất nhanh hơn để test nhanh hơn.</p>
     <div class="flow compact">
       <div class="step"><div class="t">Insight</div><div class="s">Pain point / use case</div></div><span class="arrow">→</span>
       <div class="step"><div class="t">Hooks</div><div class="s">Nhiều góc mở đầu</div></div><span class="arrow">→</span>
-      <div class="step"><div class="t">AI Video</div><div class="s">Seedance 2.0</div></div><span class="arrow">→</span>
+      <div class="step"><div class="t">AI Video</div><div class="s">Text-to-video</div></div><span class="arrow">→</span>
       <div class="step"><div class="t">Variants</div><div class="s">Test CPI / CVR</div></div>
     </div>
-    <p class="lead" style="margin-top:22px"><span class="chip">Đòn bẩy</span>&nbsp; Tạo nhiều giả thuyết, để dữ liệu chọn. <span class="tool" style="margin-left:6px">Seedance 2.0 · BytePlus</span></p>
+    <p class="lead" style="margin-top:22px"><span class="chip">Đòn bẩy</span>&nbsp; Tạo nhiều giả thuyết, để dữ liệu chọn. <span class="tool" style="margin-left:6px">Mô hình AI video</span></p>
+  </section>
+
+  <!-- CASE STUDY 2 · Localize creative -->
+  <section class="slide" data-note="Case study Workflow 2 — localize creative. Một creative gốc, tụi mình dùng AI localize lời thoại, phụ đề và giọng đọc ra 20 ngôn ngữ, rồi test nhiều biến thể theo từng thị trường. Cách này tạo và test gấp khoảng 10 lần số creative so với làm tay — theo ngày chứ không theo tuần; nhờ test nhiều rồi giữ lại hook rẻ nhất, CPI giảm khoảng 25%. Hai con số cải thiện này là ước lượng vận hành nội bộ.">
+    <span class="kicker"><span class="dot"></span> Case study · Workflow 2</span>
+    <h2>Localize creative cho <span class="grad">20 ngôn ngữ</span></h2>
+    <p class="lead">Một creative gốc → AI localize <b style="color:#fff">lời thoại, phụ đề &amp; giọng đọc</b> ra 20 ngôn ngữ; test nhiều biến thể theo từng thị trường, giữ lại cái CPI thấp nhất rồi scale.</p>
+    <div class="grid cols-2" style="margin-top:34px; gap:26px; align-items:stretch">
+      <div style="background:linear-gradient(135deg,rgba(56,224,255,.16),rgba(139,92,246,.18)); border:1px solid rgba(56,224,255,.45); border-radius:26px; padding:clamp(24px,3.5vw,40px) clamp(22px,3vw,34px); box-shadow:0 0 70px rgba(56,224,255,.15)">
+        <div class="grad" style="font-size:clamp(64px,11vw,140px); font-weight:800; line-height:.86; letter-spacing:-.03em">–25%</div>
+        <div style="margin-top:16px; font-size:clamp(17px,2vw,25px); font-weight:800; color:#fff">CPI sau khi lọc hook</div>
+        <div style="margin-top:6px; color:var(--muted); font-size:clamp(14px,1.5vw,18px); line-height:1.4">test nhiều variant, giữ lại cái rẻ nhất đem scale</div>
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(236,72,153,.14),rgba(139,92,246,.16)); border:1px solid rgba(236,72,153,.42); border-radius:26px; padding:clamp(24px,3.5vw,40px) clamp(22px,3vw,34px); box-shadow:0 0 70px rgba(236,72,153,.12)">
+        <div class="grad" style="font-size:clamp(64px,11vw,140px); font-weight:800; line-height:.86; letter-spacing:-.03em">~10×</div>
+        <div style="margin-top:16px; font-size:clamp(17px,2vw,25px); font-weight:800; color:#fff">số creative variant test được</div>
+        <div style="margin-top:6px; color:var(--muted); font-size:clamp(14px,1.5vw,18px); line-height:1.4">so với làm thủ công — tạo &amp; test theo ngày, không theo tuần</div>
+      </div>
+    </div>
+    <div class="cs-meta">Mức cải thiện CPI &amp; số variant: ước lượng vận hành</div>
   </section>
 
   <!-- WORKFLOW 3 · UA Agent -->
@@ -203,14 +239,28 @@
     </div>
   </section>
 
+  <!-- CASE STUDY 3 · UA Agent -->
+  <section class="slide" data-note="Case study Workflow 3. UA Agent trực số cho toàn bộ danh mục app EXO 24/7. Marketer không thể canh dashboard cả đêm; agent đọc số liên tục, phát hiện bất thường, tóm tắt nguyên nhân và gợi ý hành động — quyết định cuối vẫn là con người. Quy mô thật trong 30 ngày gần nhất: hơn 9 nghìn campaign trên 109 app cùng lúc, ROAS blend toàn danh mục giữ ở 127% (số thật EXO Data). Nhờ agent phát hiện bất thường và gợi ý pause/scale kịp thời, tụi mình tối ưu được khoảng 15% ngân sách — con số này là ước lượng vận hành nội bộ.">
+    <span class="kicker"><span class="dot"></span> Case study · Workflow 3</span>
+    <h2>UA Agent · Danh mục app EXO</h2>
+    <p class="lead">Agent trực số 24/7 trên toàn danh mục — phát hiện bất thường sớm, gợi ý pause/scale, marketer bấm quyết định cuối.</p>
+    <div class="metrics">
+      <div class="metric"><div class="v grad">9,053</div><div class="l">campaign theo dõi 24/7</div></div>
+      <div class="metric"><div class="v grad">109</div><div class="l">app chạy song song</div></div>
+      <div class="metric"><div class="v grad">127%</div><div class="l">ROAS blend toàn danh mục</div></div>
+      <div class="metric"><div class="v grad">~15%</div><div class="l">budget tối ưu nhờ action kịp thời</div></div>
+    </div>
+    <div class="cs-meta">Campaign · app · ROAS: số liệu thực tế (30 ngày, 248 quốc gia) · % budget tối ưu: ước lượng vận hành</div>
+  </section>
+
   <!-- 8 LOOP -->
-  <section class="slide" data-note="Ghép 3 workflow lại thì nó không phải một đường thẳng — nó là một vòng lặp. Ý tưởng thành app bằng Factory và CodePanel, creative production tạo nhiên liệu tăng trưởng, UA Agent đọc dữ liệu để tối ưu và scale. Và quan trọng: dữ liệu từ quảng cáo và người dùng quay ngược lại nuôi ý tưởng cho vòng sau. Đó là nghĩa thật của From Data to Revenue: một vòng khép kín mà AI bôi trơn từng khớp. Càng chạy nhiều vòng, studio càng nhanh.">
+  <section class="slide" data-note="Ghép 3 workflow lại thì nó không phải một đường thẳng — nó là một vòng lặp. Ý tưởng thành app bằng Xưởng App, creative production tạo nhiên liệu tăng trưởng, UA Agent đọc dữ liệu để tối ưu và scale. Và quan trọng: dữ liệu từ quảng cáo và người dùng quay ngược lại nuôi ý tưởng cho vòng sau. Đó là nghĩa thật của From Data to Revenue: một vòng khép kín mà AI bôi trơn từng khớp. Càng chạy nhiều vòng, studio càng nhanh.">
     <span class="kicker"><span class="dot"></span> Bức tranh tổng</span>
     <h2>Một vòng khép kín — <span class="grad">AI bôi trơn từng khớp</span></h2>
     <div class="flow" style="margin-top:44px">
       <div class="step"><div class="t">💡 Ý tưởng</div></div><span class="arrow">→</span>
-      <div class="step"><div class="t">📱 App</div><div class="s">Factory</div></div><span class="arrow">→</span>
-      <div class="step"><div class="t">🚀 Ship &amp; QA</div><div class="s">CodePanel</div></div><span class="arrow">→</span>
+      <div class="step"><div class="t">📱 App</div><div class="s">Xưởng App · Build</div></div><span class="arrow">→</span>
+      <div class="step"><div class="t">🚀 Ship &amp; QA</div><div class="s">Xưởng App · QA</div></div><span class="arrow">→</span>
       <div class="step"><div class="t">🎬 Creative</div><div class="s">Production</div></div><span class="arrow">→</span>
       <div class="step"><div class="t">📈 Scale</div><div class="s">UA Agent</div></div>
     </div>
